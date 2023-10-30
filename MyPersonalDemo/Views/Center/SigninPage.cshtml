@@ -1,0 +1,92 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+    <title>
+        sign in
+    </title>
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using MyPersonalDemo.Models
+@model SignInUserDataActive
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<title>Sign in</title>
+<body>
+    <link href="~/style.css" rel="stylesheet" />
+    <div class="col-lg-9  mx-auto rounded border p-3">
+
+        <form method="post" asp-controller="Center" asp-action="Result">
+            <div class="row nb-3">
+                <label class="col-sn-4 col-form-label">First name</label>
+                <div class="col-sn-8">
+                    <input class="form-control" asp-for="FirstName" /><br />
+
+                    <span asp-validation-for="FirstName" class="red-color"></span>
+                </div>
+            </div>
+            <div class="row nb-3">
+                <label class="col-sn-4 col-form-label">Last Name</label>
+                <div class="col-sn-8">
+                    <input class="form-control" asp-for="LastName" />
+                    <br />
+
+                    <span asp-validation-for="LastName" class="red-color"></span>
+                </div>
+            </div>
+            <div class="row nb-3">
+                <label class="col-sn-4 col-form-label">Email</label>
+                <div class="col-sn-8">
+                    <input class="form-control" asp-for="Email" />
+                    <br />
+
+                    <span asp-validation-for="Email" class="red-color"></span>
+                </div>
+                <div class="row nb-3">
+                    <label class="col-sn-4 col-form-label">Phone number</label>
+                    <div class="col-sn-8">
+                        <input class="form-control" asp-for="PhoneNumber" />
+                    </div>
+                </div>
+                <div class="row nb-3">
+                    <label class="col-sn-4 col-form-label">Password</label>
+                    <div class="col-sn-8">
+                        <input class="form-control" asp-for="Password" />
+                    </div>
+                </div>
+                <div class="row nb-3">
+                    <label class="col-sn-4 col-form-label">Course of choice</label>
+                    <div class="col-sn-8">
+                        <select asp-for="Course">
+                            <option value="Physics">Physics</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="biology">Biology</option>
+                            <option value="maths">Maths</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-sn-4">
+                        <button type="submit">submit</button>
+                    </div>
+                </div>
+        </form>
+
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" asp-fallback-src="~/cdnjs.cloudflare.com_ajax_libs_jquery_3.6.0_jquery.min(code 1).js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js" asp-fallback-src="~/cdnjs.cloudflare.com_ajax_libs_jquery-validate_1.19.4_jquery.validate(code 2).min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" asp-fallback-src="~/cdnjs.cloudflare.com_ajax_libs_jquery-validation-unobtrusive_3.2.12_jquery.validate.unobtrusive.min(code 3).js"></script>
+
+</body>
+</html>
+
+</html>

@@ -1,0 +1,19 @@
+﻿@using MyPersonalDemo.Models
+@model SignInUserDataActive
+
+<!DOCTYPE html>
+<html>
+    <title>Result</title>
+    <body>
+        <b>
+        @Model.FirstName, you've successfuly registered.
+        </b>
+        <br />
+        Click the button below to go the the Login page.
+        <br />
+    <a asp-controller="Center" asp-action="LoginPage">
+        <button type="submit">Login</button>
+    </a>
+        
+    </body>
+</html>

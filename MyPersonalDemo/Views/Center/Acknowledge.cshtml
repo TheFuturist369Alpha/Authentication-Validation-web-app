@@ -1,0 +1,47 @@
+﻿@using MyPersonalDemo.Models
+@model Flag
+
+<!DOCTYPE html>
+<html>
+    <title>
+        Acknowledgment
+    </title>
+    @if(Model!=null){
+if (Model.check==Ask.CorrectPasswordCorrectEmail)
+{
+    <text>
+        <center>
+            <h2>
+                Welcome to the Jalvis website
+            </h2>
+        </center>
+    </text>
+}
+else if(Model.check==Ask.UnregisteredEmail)
+{
+    <text>
+        <center>
+            <h2>
+               Looks like youve not registered.
+               <br>
+               please sign in.
+            </h2>
+            <br>
+            <a href="/sign-in">
+            <button>
+                Sign in
+            </button>    
+            </a>
+        </center>
+        </text>
+    }
+    else
+    {
+        <text>
+            password mismatch
+        </text>
+    }
+}
+
+
+</html>
